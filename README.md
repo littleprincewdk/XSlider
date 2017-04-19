@@ -1,5 +1,6 @@
-XSlider[http://princekin.tjxuechuang.com/projects/xslider]
+XSlider
 -
+[demo](http://princekin.tjxuechuang.com/projects/xslider/index.html)
 ####依赖
     jquery.js
     jquery.mousewheel.js
