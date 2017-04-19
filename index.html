@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XSlider</title>
+    <link rel="stylesheet" type="text/css" href="./dist/xslider.css"/>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            font-family: Arial;
+        }
+        h1{
+            margin-top:0;
+            padding-top:50px;
+            color:#fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="XSlider-wrapper" style="height:100%;width:100%;">
+    <div class="XSlider-slider">
+        <div class="XSlider-item" data-id="1" style="background-color: #00FF00"><h1>First</h1></div>
+        <div class="XSlider-item" data-id="2" style="background-color: #0000FF"><h1>Second</h1></div>
+        <div class="XSlider-item" data-id="3" style="background-color: #c80000"><h1>Third</h1></div>
+        <div class="XSlider-item" data-id="4" style="background-color: #c8c735"><h1>Fourth</h1></div>
+        <div class="XSlider-item" data-id="5" style="background-color: #c04f58"><h1>Fifth</h1></div>
+        <div class="XSlider-item" data-id="6" style="background-color: #1ec8c5"><h1>Sixth</h1></div>
+    </div>
+    <div class="XSlider-indicator">
+        <div class="XSlider-indicator-item"></div>
+        <div class="XSlider-indicator-item"></div>
+        <div class="XSlider-indicator-item"></div>
+        <div class="XSlider-indicator-item"></div>
+        <div class="XSlider-indicator-item"></div>
+        <div class="XSlider-indicator-item"></div>
+    </div>
+    <div class="XSlider-btn">
+        <button class="XSlider-btn-prev"></button>
+        <button class="XSlider-btn-next"></button>
+    </div>
+</div>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+<script src="./dist/xslider.js"></script>
+<script>
+    $(function () {
+        var slider=$(".XSlider-wrapper").XSlider({
+            initPage:1,             //初始页
+			duration:300,           //页面切换时间
+			flick:{                 //规定滑动多少时间和距离定义为flick
+				duration:300,
+				distance:20
+			},
+			//自动播放
+			autoPlay:false,         //是否开启自动播放
+			autoPlayInterval:5000,  //自动播放间隔
+			//控制方式
+			btnMode:true,          //是否启用按钮控制
+			mouseMode:true,         //是否启用鼠标滑动控制
+			touchMode:false,        //是否启用触摸控制
+			mouseWheelMode:true,   //是否启用鼠标滚轮控制
+			indicatorMode:true,    //是否启用指示器控制
+			//UI
+			indicatorTheme:"rect",	//指示器主题
+			indicatorPos:"bottom",  //指示器位置
+			horizontalMode:true,    //页面是否水平滚动，以及鼠标滑动控制时的控制方向
+			//特效
+			switchingOff:true,      //页面切换过程中控制无效
+			verticalVis:0.3,		//水平方向的粘性,false时无粘性
+			horizontalVis:0.3,		//垂直方向的粘性,false时无粘性
+			loopMode:false,         //是否循环播放
+			infinite:false,         //是否无穷滚动
+            //切换动画
+            switchMode:{
+                effect:"slide", //切换效果
+				//"linear","swing","easeInQuad","easeOutQuad",'easeInOutQuad',
+                //"easeInCubic","easeOutCubic","easeInOutCubic","easeInQuart","easeOutQuart",
+                //"easeInOutQuart","easeInQuint","easeOutQuint","easeInOutQuint","easeInExpo",
+                //"easeOutExpo","easeInOutExpo","easeInSine","easeOutSine","easeInOutSine",
+                //"easeInCirc","easeOutCirc","easeInOutCirc","easeInElastic","easeOutElastic",
+                //"easeInOutElastic","easeInBack","easeOutBack","easeInOutBack","easeInBounce",
+                //"easeOutBounce","easeInOutBounce"
+                easing:"swing" //动画效果
+            }
+        });
+    })
+</script>
+</body>
+</html>
