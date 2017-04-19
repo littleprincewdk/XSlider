@@ -1,4 +1,4 @@
-XSlider
+XSlider[http://princekin.tjxuechuang.com/xslider]
 -
 ####依赖
     jquery.js
